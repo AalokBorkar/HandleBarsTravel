@@ -33,8 +33,8 @@
 
 function insertNewTwit(twitText, twitAuthor) {
   var twitContext = { //created based off of user input
-    twitText: twitText,
-    twitAuthor: twitAuthor
+    text: twitText,
+    author: twitAuthor
   };
                           //qasi-function
   var twitHTML = Handlebars.templates.newTwit(twitContext); 
