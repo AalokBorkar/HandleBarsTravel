@@ -25,8 +25,9 @@
 	  res.status(200).render('newView', {data: twitData, index: 1}); //index: should you render create twit button 
 	});
 
-	app.get('/twits/%C:twit%3E', function (req, res){
-		var twitId = req.params.twit;
+	app.get('/twits/%3C:twit%3E', function (req, res){
+    	var twitId = req.params.twit;
+		console.log(twitId);
 		var singleTwitArray = [];
 		if((twitId >= twitData.length) || (twitId < 0)){ //if its out of data range
 			res.status(404).render('error');
